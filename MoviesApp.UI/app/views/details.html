@@ -1,0 +1,111 @@
+﻿ <div>
+
+     <div class="content">
+         <h2 class="m_3"></h2>
+         <div class="movie_top">
+             <div class="col-md-9 movie_box">
+                 <!-- Movie variant with time -->
+
+                 <h3>{{ vm.error }}</h3>
+
+                 <div class="content">
+                     <div class="movie_top">
+                         <div class="col-md-12 movie_box">
+                             <div class="grid images_3_of_2">
+                                 <div class="movie_image">
+                                     <span class="movie_rating">{{vm.movie.Rating}}</span>
+                                     <img ng-src="{{vm.movie.Url}}" class="img-responsive" alt="">
+                                 </div>
+
+                                 <vote-directive update-fn="vm.vote(rating)"></vote-directive>
+
+                             </div>
+                             <div class="desc1 span_3_of_2">
+                                 <p class="movie_option"><strong>Title: </strong>{{ vm.movie.Title }}</p>
+                                 <p class="movie_option"><strong>Downloads: </strong>{{ vm.movie.Downloads }}</p>
+                                 <p class="movie_option"><strong>Description: </strong> {{ vm.movie.Description }}</p>
+                                 <div class="down_btn"><a class="btn1" href="#"><span> </span>Download</a></div>
+                             </div>
+                             <div class="clearfix"> </div>
+                             <p class="m_4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                             <form name="myForm" method="post" ng-submit="vm.SaveComment(vm.newComment)">
+                                 <div class="to">
+                                     <input required type="text" class="text" ng-model="vm.newComment.Name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                                     <input required type="text" class="text" ng-model="vm.newComment.Email"  value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left:3%">
+                                 </div>
+                                 <div class="text">
+                                     <textarea required value="Message:" ng-model="vm.newComment.Comment"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
+                                 </div>
+                                 <div class="form-submit1">
+                                     <input name="submit" ng-disabled="myForm.$invalid" type="submit" id="submit" value="Submit Your Message"><br>
+                                 </div>
+                                 <div class="clearfix"></div>
+                             </form>
+                             <div class="single">
+                                 <h1>10 Comments</h1>
+                                 <ul class="single_list" ng-repeat="comment in vm.commentsArray">
+                                     <li>
+                                         <div class="preview"><a href="#"><img src="images/2.jpg" class="img-responsive" alt=""></a></div>
+                                         <div class="data">
+                                             <div class="title">{{ comment.Name }}<a href="#">reply</a></div>
+                                             <p>{{ comment.Comment }}</p>
+                                         </div>
+                                         <div class="clearfix"></div>
+                                     </li>
+                                 </ul>
+                             </div>
+                         </div>
+
+
+                         <div class="clearfix"> </div>
+                     </div>
+                 </div>
+
+
+                 <div class="clearfix"> </div>
+                 <!-- Movie variant with time -->
+             </div>
+             <div class="col-md-3">
+
+                 <div class="movie_img">
+                     <div class="grid_2">
+                         <img src="images/pic6.jpg" class="img-responsive" alt="">
+                         <div class="caption1">
+                             <ul class="list_5 list_7">
+                                 <li><i class="icon5"> </i><p>3,548</p></li>
+                             </ul>
+                             <i class="icon4 icon6 icon7"> </i>
+                             <p class="m_3">Guardians of the Galaxy</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="grid_2 col_1">
+                     <img src="images/pic2.jpg" class="img-responsive" alt="">
+                     <div class="caption1">
+                         <ul class="list_3 list_7">
+                             <li><i class="icon5"> </i><p>3,548</p></li>
+                         </ul>
+                         <i class="icon4 icon7"> </i>
+                         <p class="m_3">Guardians of the Galaxy</p>
+                     </div>
+                 </div>
+                 <div class="grid_2 col_1">
+                     <img src="images/pic9.jpg" class="img-responsive" alt="">
+                     <div class="caption1">
+                         <ul class="list_3 list_7">
+                             <li><i class="icon5"> </i><p>3,548</p></li>
+                         </ul>
+                         <i class="icon4 icon7"> </i>
+                         <p class="m_3">Guardians of the Galaxy</p>
+                     </div>
+                 </div>
+             </div>
+             <div class="clearfix"> </div>
+         </div>
+
+
+
+
+
+     </div>
+ </div>

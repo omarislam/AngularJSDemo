@@ -1,0 +1,18 @@
+﻿<div class="movie movie-test movie-test-dark movie-test-left">
+    <div class="movie__images">
+        <a ui-sref="details({ movieId: {{movie.Id}} })">
+            <img alt="" style="height:200px" ng-src="{{movie.Url}}" class="img-responsive">
+        </a>
+    </div>
+    <div class="movie__info">
+        <a ui-sref="home" class="movie__title">{{movie.Title}} </a>
+        <p class="movie__time">80 min</p>
+        <p class="movie__option">Cat 1</a> | <a href="single.html">Cat 2</a> | <a href="single.html">Cat 3</a></p>
+        <ul class="list_6">
+            <li><i class="icon1"> </i><p>{{movie.Views}}</p></li>
+            <li><i class="icon3"> </i><p>{{movie.Downloads}}</p></li>
+            <li>Rating : &nbsp;&nbsp;<p><img src="{{movie.Rating | ratings}}" alt=""></p></li>
+        </ul>
+    </div>
+    <div class="clearfix"> </div>
+</div>
